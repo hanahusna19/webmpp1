@@ -1,0 +1,169 @@
+BUTTON
+
+ <div class="col-xxl-4 col-xl-4">
+          <button type="button" class="btn btn-outline-danger" onclick="exportToPDF()"><i class="fas fa-file-pdf"></i></button>
+          <button type="button" class="btn btn-outline-success" onclick="exportToExcel()"><i class="fas fa-file-excel"></i></button>
+        </div>
+      </div>
+
+      </br>
+      <script>
+        function exportToPDF() {
+          const element = document.querySelector('table');
+          html2pdf(element);
+        }
+
+        function exportToExcel() {
+          const element = document.querySelector('table');
+          const ws = XLSX.utils.table_to_sheet(element);
+          const wb = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+          XLSX.writeFile(wb, 'exported_data.xlsx');
+        }
+      </script>
+
+<SELECT>
+    <div class="col-sm-4">
+        <br/>
+         <select id="inputState" class="form-control">
+           <option>Posisi Jabatan</option>
+            <option>Status Pegawai</option>
+              </select>
+          </br>
+</SELECT>
+
+
+VERIFIKASI
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get all approve buttons
+      const approveButtons = document.querySelectorAll('.approve-btn');
+      // Get all reject buttons
+      const rejectButtons = document.querySelectorAll('.reject-btn');
+
+      // Function to handle approve action
+      function handleApprove() {
+        // Here, you can implement your logic for approving the item
+        // For demonstration, let's just display a simple confirmation dialog
+        const confirmApprove = confirm("Yakin Menyetujui Pengajuan Tersebut  ?");
+        if (confirmApprove) {
+          // User confirmed, you can perform further actions here
+          console.log("Pengajuan Diterima");
+        }
+      }
+
+      // Function to handle reject action
+      function handleReject() {
+        // Here, you can implement your logic for rejecting the item
+        // For demonstration, let's just display a simple confirmation dialog
+        const confirmReject = confirm("Yakin Menolak Pengajuan Tersebut ?");
+        if (confirmReject) {
+          // User confirmed, you can perform further actions here
+          console.log("Pengajuan Ditolak");
+        }
+      }
+
+      // Add click event listeners to approve buttons
+      approveButtons.forEach(button => {
+        button.addEventListener('click', handleApprove);
+      });
+
+      // Add click event listeners to reject buttons
+      rejectButtons.forEach(button => {
+        button.addEventListener('click', handleReject);
+      });
+    });
+  </script>
+
+
+PERENCANAAN 
+
+<script>
+$(document).ready(function () {
+  // Menangani submit form tambah data
+  $("#formTambahData").submit(function (e) {
+    e.preventDefault();
+
+    // Ambil nilai dari input
+    var posisi = $("#posisi").val();
+    var status = $("#status").val();
+
+    // Tambahkan baris ke dalam tabel
+    var newRow = $("<tr><td>" + posisi + "</td><td>" + status + "</td><tr>");
+    
+    // Tambahkan input bulan ke dalam baris
+    for (var i = 0; i < 12; i++) {
+      newRow.append("<td><input type='number' class='form-control' min='0' required></td>");
+    }
+
+    // Tambahkan kolom aksi
+    newRow.append("<td><button type='button' class='btn btn-outline-warning btn-sm'><i class='bi bi-pencil-square'></i></button><button type='button' class='btn btn-outline-danger btn-sm'><i class='bi bi-trash'></i></button><a href='detailpengelolaan.php' class='btn btn-outline-info btn-sm'><i class='bi bi-info-lg'></i></a></td>");
+
+    // Tambahkan baris ke dalam tabel
+    $("#tabelData tbody").append(newRow);
+
+    // Reset formulir dan tutup modal
+    $("#formTambahData")[0].reset();
+    $("#tambahDataModal").modal("hide");
+  });
+});
+</script>
+
+
+LIST USERS ADMIN 
+
+<a class="dropdown-item d-flex align-items-center" href="#" >
+<i class="mr-2"></i><?=$this->fungsi->user_login()->nama?></a>
+<div class="dropdown-divider"></div>
+<a href="#" class="dropdown-item">
+<i class="fas fa-user mr-2"></i>Profile</a>
+
+
+SELECT 
+
+<select name="id_pegawai" class="form-control">
+  <?php foreach ($nama_pegawai as $key => $value) { ?>
+  <option value="<?= $value->id_pegawai ?>"><?= $value->nama_pegawai ?></option>
+<?php } ?>
+
+ <input type="text" name="nama_pegawai" class="form-control">
+                  <?= form_error('namapegawai', '<div class="text-small text-danger">'.'</div>'); ?>   -->
+                 
+                </select>
+                
+
+
+                <?php
+                    $sql_pegawai = mysqli_query($con, "SELECT * FROM tbl_pegawai") or die 
+                      (mysqli_error($con));
+                    while($data_pegawai = mysqli_fetch_array($sql_pegawai)) {
+                      echo '<option value="'.$data_pegawai['id_pegawai'].'">'.$data_pegawai['nama_pegawai'].'</option>';
+                    } ?>
+
+
+<?php foreach($pegawai->result() as $key => $data) { ?>
+  <option value="<?=$data->id_pegawai?>"><?=$data->name?></option>
+<?php } ?>
+
+
+<?= form_error('namapegawai', '<div class="text-small text-danger">'.'</div>'); ?>
+
+
+$this->db->select('t1.field, t2.field2')
+          ->from('table1 AS t1, table2 AS t2')
+          ->where('t1.id = t2.table1_id')
+          ->where('t1.user_id', $user_id);
+
+
+          <select name="nama_pegawai" id=pegawai class="form-control">
+                    <option value="">--- Pilih --- </option>
+                    <?php= form_error('nama_pegawai', '<div class="text-small text-danger">'.'</div>'); 
+                    $sql_pegawai = mysqli_query($con, "SELECT * FROM tbl_pegawai") or die 
+                      (mysqli_error($con));
+                    while($data_pegawai = mysqli_fetch_array($sql_pegawai)) {
+                      echo '<option value="'.$data_pegawai['id_pegawai'].'">'.$data_pegawai['nama_pegawai'].'</option>';
+                    } ?>
+                  </select>
+
+                  
