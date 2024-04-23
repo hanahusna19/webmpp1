@@ -31,7 +31,7 @@
                     <td>2023/02/11</td>
                     <td>2023</td>
                     <td>-</td>
-                    <td><a href="detailperencanaan.php" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                    <td><a href="<?= base_url('detailperencanaan') ?>" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
                   </tr>
                   <tr>
                     <td><img src="assets/img/user.png" alt="Profil" class="rounded-circle">   Rahmat Ilaya Nur</td>
