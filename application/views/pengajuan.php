@@ -91,7 +91,7 @@
                                             <td>2024/04/25</td>
                                             <td>Baru</td>
                                             <td><span class="badge bg-success">Disetujui</span></td>
-                                            <td><a href= "<?= base_url('detailpengajuan') ?>" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                                            <td><a href= "<?= base_url('detailpengajuan') ?>" type="button" class="btn btn-outline-primary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
                                         </tr>
                                        
                                     </tbody>
