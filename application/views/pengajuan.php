@@ -58,7 +58,7 @@
                                             <td>2024/04/25</td>
                                             <td>Penganti</td>
                                             <td><span class="badge bg-warning">Proses</span></td>
-                                            <td><a href="detailpengajuan.php" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                                            <td></td>
                                         </tr>
                                         <tr class="text-center">
                                         <th scope="row"><a href="#">#2457</a></th>
@@ -69,7 +69,7 @@
                                             <td>2024/04/25</td>
                                             <td>Penganti</td>
                                             <td><span class="badge bg-danger">Ditolak</span></td>
-                                            <td><a href="detailpengajuan.php" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                                            <td></td>
                                         </tr>
                                         <tr class="text-center">
                                         <th scope="row"><a href="#">#2457</a></th>
@@ -80,7 +80,7 @@
                                             <td>2024/04/25</td>
                                             <td>Baru</td>
                                             <td><span class="badge bg-success">Disetujui</span></td>
-                                            <td><a href="detailpengajuan.php" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                                            <td><a href= "<?= base_url('detailpengajuan') ?>" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
                                         </tr>
                                         <tr class="text-center">
                                         <th scope="row"><a href="#">#2457</a></th>
@@ -91,7 +91,7 @@
                                             <td>2024/04/25</td>
                                             <td>Baru</td>
                                             <td><span class="badge bg-success">Disetujui</span></td>
-                                            <td><a href="detailpengajuan.php" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
+                                            <td><a href= "<?= base_url('detailpengajuan') ?>" type="button" class="btn btn-outline-secondary rounded-pill btn-sm"> <i class="bi bi-info"></i>Detail</a></td>
                                         </tr>
                                        
                                     </tbody>
