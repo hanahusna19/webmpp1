@@ -25,6 +25,7 @@
                 <th>Status Pengajuan</th>
                 <th style="width: 11%">Aksi</th>
               </tr>
+              
             </thead>
             <tbody>
               <tr>
